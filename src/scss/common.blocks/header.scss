@@ -1,0 +1,10 @@
+.header {
+	padding: 15px 0;
+	background-color: grey;
+    &__container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			@include burger-X(40px,40px,2px,#000,1200px);
+		}
+}

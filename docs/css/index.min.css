@@ -1,0 +1,226 @@
+:root {
+	--font-family: "Open Sans", "sans-serif";
+	--content-width: 1170px;
+	--container-offset: 15px;
+	--container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+	--light-color: #fff
+}
+
+*,
+:after,
+:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit
+}
+
+html {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 var(--container-offset);
+	max-width: var(--container-width)
+}
+
+.title {
+	margin: 0
+}
+
+.subtitle {
+	display: block
+}
+
+.text {
+	margin: 0
+}
+
+.ibg,
+.img {
+	-o-object-fit: cover;
+	object-fit: cover
+}
+
+.img {
+	max-width: 100%;
+	height: auto
+}
+
+.ibg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%
+}
+
+.bg {
+	background-position: 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	min-height: 650px
+}
+
+.scroll-snap-section {
+	scroll-snap-align: start;
+	scroll-snap-stop: always
+}
+
+.link {
+	text-decoration: none;
+	color: inherit
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+	outline: 0
+}
+
+.page_ios .dis-scroll {
+	position: relative
+}
+
+.page {
+	height: 100%;
+	font-family: var(--font-family, sans-serif);
+	-webkit-text-size-adjust: 100%
+}
+
+.page__body {
+	margin: 0;
+	height: 100%;
+	font-size: 16px
+}
+
+.lock-scroll {
+	position: fixed;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 100vh;
+	-ms-scroll-chaining: none;
+	overscroll-behavior: none
+}
+
+.nav__list {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	gap: 30px;
+	margin: 0;
+	padding: 0;
+	list-style: none
+}
+
+.header {
+	padding: 15px 0;
+	background-color: gray
+}
+
+.header__container,
+.header__container .burger {
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between
+}
+
+.header__container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center
+}
+
+.header__container .burger {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	border: 0;
+	padding: 0;
+	width: 40px;
+	height: 40px;
+	background-color: transparent;
+	cursor: pointer;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-transition: width .3s ease 0s, height .3s ease 0s, background-color .3s ease 0s;
+	transition: width .3s ease 0s, height .3s ease 0s, background-color .3s ease 0s
+}
+
+.header__container .burger__line,
+.header__container .burger_active .burger__line_top {
+	-webkit-transition: -webkit-transform .3s ease-in-out;
+	transition: transform .3s ease-in-out;
+	transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out
+}
+
+.header__container .burger__line {
+	width: 100%;
+	height: 2px;
+	background-color: #000
+}
+
+.header__container .burger_active .burger__line_top {
+	-webkit-transform: translateY(19px) rotate(45deg);
+	-ms-transform: translateY(19px) rotate(45deg);
+	transform: translateY(19px) rotate(45deg)
+}
+
+.header__container .burger_active .burger__line_middle {
+	-webkit-transform: scaleX(0);
+	-ms-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: -webkit-transform .3s ease-in-out 0s;
+	transition: transform .3s ease-in-out 0s;
+	transition: transform .3s ease-in-out 0s, -webkit-transform .3s ease-in-out 0s
+}
+
+.header__container .burger_active .burger__line_bottom {
+	-webkit-transform: translateY(-19px) rotate(-45deg);
+	-ms-transform: translateY(-19px) rotate(-45deg);
+	transform: translateY(-19px) rotate(-45deg);
+	-webkit-transition: -webkit-transform .3s ease-in-out;
+	transition: transform .3s ease-in-out;
+	transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out
+}
+
+.main {
+	min-height: 100%
+}
+
+.hero {
+	background-color: #8a2be2
+}
+
+.footer {
+	background-color: brown
+}
+
+@media (min-width:1200px) {
+	.header__container .burger {
+		display: none
+	}
+}
+
+@media (max-width:575.98px) {
+	.bg {
+		height: auto
+	}
+
+	.footer {
+		background-color: #0db51b
+	}
+}
+
+@media (pointer:coarse) {
+	.scroll-snap-section {
+		scroll-snap-align: none;
+		scroll-snap-stop: normal
+	}
+}
