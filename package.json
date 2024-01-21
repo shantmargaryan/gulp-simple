@@ -10,7 +10,7 @@
     "preview": "gulp previewBuild"
   },
   "keywords": [],
-  "author": "Vahan Hovanisyan",
+  "author": "Shant Margaryan",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.23.3",
