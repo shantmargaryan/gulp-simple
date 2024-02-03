@@ -49,7 +49,7 @@ const html = () => {
 			prefix: '@',
 			basepath: '@file'
 		}))
-		.pipe(gulpWebpHtml())
+		// .pipe(gulpWebpHtml())
 		.pipe(gulpTypograf({
 			locale: ['ru', 'en-US']
 		}))
